@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Marvel Studio</title>
+	</head>
+	<body>
+		<main class="main">
+			<header class="header">
+				<a
+					href="https://www.marvel.com/"
+					target="_blank"
+					class="header-link"
+				>
+					<img src="img/logo.png" alt="marvel-logo" class="logo"
+				/></a>
+				<div class="ui">
+					<div class="switch">
+						<span class="switch-label">Dark</span>
+						<input id="switch" type="checkbox" />
+						<span class="switch-label">Light</span>
+					</div>
+					<div class="volume">
+						<div class="volume-wrapper">
+							<svg class="volume-icon">
+								<use xlink:href="/sprite.svg#volume"></use>
+							</svg>
+							<span class="volume-text">Volume</span>
+						</div>
+						<div class="volume-control">
+							<input
+								class="range"
+								type="range"
+								id="volume"
+								name="volume"
+								min="0"
+								max="100"
+							/>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="slide">
+				<img src="img/image-1.jpg" alt="avengres" />
+			</div>
+			<div class="slide">
+				<img src="img/image-2.jpg" alt="avengres" />
+			</div>
+			<div class="slide">
+				<img src="img/image-3.jpg" alt="avengres" />
+			</div>
+			<div class="slide">
+				<img src="img/image-4.jpg" alt="avengres" />
+			</div>
+			<div class="slide">
+				<img src="img/image-5.jpg" alt="avengres" />
+			</div>
+			<div class="slide">
+				<img src="img/image-6.jpg" alt="avengres" />
+			</div>
+			<div class="slide active">
+				<img src="img/image-7.jpg" alt="avengres" />
+			</div>
+			<div class="slide">
+				<img src="img/image-8.jpg" alt="avengres" />
+			</div>
+			<div class="slide">
+				<img src="img/image-9.jpg" alt="avengres" />
+			</div>
+			<div class="slide">
+				<img src="img/image-10.jpg" alt="avengres" />
+			</div>
+			<div class="slide">
+				<img src="img/image-11.jpg" alt="avengres" />
+			</div>
+			<a href="#heroes-section" class="anchor-link"
+				><div class="arrow">
+					<span></span>
+					<span></span>
+					<span></span></div
+			></a>
+		</main>
+		<section id="heroes-section" class="content">
+			<div class="container">
+				<h1 class="section-title">Marvel Heroes</h1>
+				<span class="descr"
+					>hover over a character to view information about him</span
+				>
+				<div class="filters"></div>
+				<div class="cards">
+					<div class="hero-card">
+						<img
+							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/CapAmerica-EndgameProfile.jpg?raw=true"
+							alt=""
+							class="hero-photo"
+						/>
+						<div class="hero-info">
+							<div class="hero-label">
+								<span class="key">Name:</span>
+								<span class="key">Real name:</span>
+								<span class="key">Species:</span>
+								<span class="key">Citizenship</span>
+								<span class="key">Gender:</span>
+								<span class="key">Birthday:</span>
+								<span class="key">Actors:</span>
+								<span class="key">Movies:</span>
+							</div>
+							<div class="hero-descr">
+								<span class="sense" id="name"
+									>Captain America</span
+								>
+								<span class="sense" id="real-name"
+									>Steven Grant Rogers</span
+								>
+								<span class="sense" id="species">human</span>
+								<span class="sense" id="citizenship"
+									>British</span
+								>
+								<span class="sense" id="gender">male</span>
+								<span class="sense" id="birthday">1918</span>
+								<span class="sense" id="actors"
+									>Chris Evans</span
+								>
+								<span class="sense" id="movies"
+									>Captain America: The First Avenger, The
+									Avengers, Captain America: The Winter
+									Soldier, Avengers: Age of Ultron, Captain
+									America: Civil War, Avengers: Infinity War,
+									Avengers: Endgame
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="hero-card">
+						<img
+							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/Black_Panther_AIW_Profile.jpg?raw=true"
+							alt=""
+							class="hero-photo"
+						/>
+					</div>
+					<div class="hero-card">
+						<img
+							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/Gamora_AIW_Profile.jpg?raw=true"
+							alt=""
+							class="hero-photo"
+						/>
+					</div>
+					<div class="hero-card">
+						<img
+							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/Scarlet_Witch_AIW_Profile.jpg?raw=true"
+							alt=""
+							class="hero-photo"
+						/>
+					</div>
+					<div class="hero-card">
+						<img
+							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/Skurgetheexecutionerprofile.png?raw=true"
+							alt=""
+							class="hero-photo"
+						/>
+					</div>
+					<div class="hero-card">
+						<img
+							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/DumDumDuganProfile.png?raw=true"
+							alt=""
+							class="hero-photo"
+						/>
+					</div>
+					<div class="hero-card">
+						<img
+							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/Jane_Foster_Asgardian.jpg?raw=true"
+							alt=""
+							class="hero-photo"
+						/>
+					</div>
+					<div class="hero-card">
+						<img
+							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/Drax_AIW_Profile.jpg?raw=true"
+							alt=""
+							class="hero-photo"
+						/>
+					</div>
+					<div class="hero-card">
+						<img
+							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/Agent_Carter_Season_2_Promo_01.jpg?raw=true"
+							alt=""
+							class="hero-photo"
+						/>
+					</div>
+				</div>
+				<button class="show-btn">show more</button>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-wrapper">
+					<a href="https://www.marvel.com/" target="_blank">
+						<svg class="footer-logo">
+							<use xlink:href="sprite.svg#marvel-logo"></use>
+						</svg>
+					</a>
+					<ul class="footer-links">
+						<li class="footer-item">
+							<a
+								href="https://www.marvel.com/corporate/about"
+								class="footer-link"
+								target="_blank"
+								>ABOUT MARVEL</a
+							>
+						</li>
+						<li class="footer-item">
+							<a
+								href="https://www.marvel.com/help"
+								class="footer-link"
+								target="_blank"
+								>HELP/FAQS</a
+							>
+						</li>
+						<li class="footer-item">
+							<a
+								href="https://jobs.disneycareers.com/search-jobs"
+								class="footer-link"
+								target="_blank"
+								>CAREERS</a
+							>
+						</li>
+						<li class="footer-item">
+							<a
+								href="https://www.marvel.com/corporate/interns"
+								class="footer-link"
+								target="_blank"
+								>INTERNSHIPS</a
+							>
+						</li>
+					</ul>
+					<ul class="footer-links">
+						<li class="footer-item">
+							<a
+								href="https://www.marvel.com/corporate/advertising"
+								class="footer-link"
+								target="_blank"
+								>ADVERTISING</a
+							>
+						</li>
+						<li class="footer-item">
+							<a
+								href="https://www.marvelhq.com/"
+								class="footer-link"
+								target="_blank"
+								>MARVELHQ.COM</a
+							>
+						</li>
+						<li class="footer-item">
+							<a
+								href="https://www.marvel.com/signin?referer=http%3A%2F%2Fwww.marvel.com%2Fredeem"
+								class="footer-link"
+								target="_blank"
+								>REDEEM DIGITAL COMICS</a
+							>
+						</li>
+					</ul>
+					<div class="socials">
+						<span class="socials-text">FOLLOW MARVEL </span>
+						<div class="socials-links">
+							<a
+								href="https://www.facebook.com/Marvel/"
+								class="social-link"
+								target="_blank"
+								><svg class="social-icon">
+									<use
+										xlink:href="sprite.svg#facebook"
+									></use></svg
+							></a>
+							<a
+								href="https://twitter.com/marvel"
+								class="social-link"
+								target="_blank"
+								><svg class="social-icon">
+									<use
+										xlink:href="sprite.svg#twitter"
+									></use></svg
+							></a>
+							<a
+								href="https://www.instagram.com/marvel/"
+								class="social-link"
+								target="_blank"
+								><svg class="social-icon">
+									<use
+										xlink:href="sprite.svg#instagram"
+									></use></svg
+							></a>
+							<a
+								href="https://marvelentertainment.tumblr.com/"
+								class="social-link"
+								target="_blank"
+								><svg class="social-icon">
+									<use
+										xlink:href="sprite.svg#tumblr"
+									></use></svg
+							></a>
+							<a
+								href="https://www.youtube.com/marvel"
+								class="social-link"
+								target="_blank"
+								><svg class="social-icon">
+									<use
+										xlink:href="sprite.svg#youtube"
+									></use></svg
+							></a>
+							<a
+								href="https://www.snapchat.com/add/marvelhq"
+								class="social-link"
+								target="_blank"
+								><svg class="social-icon">
+									<use
+										xlink:href="sprite.svg#snapchat"
+									></use></svg
+							></a>
+							<a
+								href="https://www.pinterest.ru/marvelofficial/_created/"
+								class="social-link"
+								target="_blank"
+								><svg class="social-icon">
+									<use
+										xlink:href="sprite.svg#pinterest"
+									></use></svg
+							></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
