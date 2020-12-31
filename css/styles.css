@@ -321,7 +321,9 @@ input {
 }
 
 .main .slide {
-  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 5s;
+  transition: 5s;
   position: absolute;
   top: 0;
   left: 0;
@@ -357,8 +359,8 @@ input {
      object-fit: cover;
 }
 
-.main .active {
-  visibility: visible;
+.main .slide-active {
+  opacity: 1;
 }
 
 .main .arrow {
