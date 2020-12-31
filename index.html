@@ -91,11 +91,97 @@
 		<section id="heroes-section" class="content">
 			<div class="container">
 				<h1 class="section-title">Marvel Heroes</h1>
+				<div class="filters">
+					<div class="select-wrapper">
+						<div class="select-label">Filter by movie</div>
+						<div class="select-block">
+							<svg class="filter-icon">
+								<use xlink:href="sprite.svg#filter"></use>
+							</svg>
+							<input
+								class="output-filter"
+								type="text"
+								disabled
+								value="All"
+							/>
+							<ul class="dropdown">
+								<li class="dropdown-item">
+									Captain America: The First Avenger
+								</li>
+								<li class="dropdown-item">The Avengers</li>
+								<li class="dropdown-item">
+									Captain America: The Winter Soldier
+								</li>
+								<li class="dropdown-item">
+									Avengers: Age of Ultron
+								</li>
+								<li class="dropdown-item">
+									Captain America: Civil War
+								</li>
+								<li class="dropdown-item">
+									Avengers: Infinity War
+								</li>
+								<li class="dropdown-item">
+									Avengers: Avengers: Endgame
+								</li>
+								<li class="dropdown-item">Hulk</li>
+								<li class="dropdown-item">Spider-man</li>
+							</ul>
+						</div>
+					</div>
+					<div class="select-wrapper">
+						<div class="select-label">Filter by gender</div>
+						<div class="select-block">
+							<svg class="filter-icon">
+								<use xlink:href="sprite.svg#filter"></use>
+							</svg>
+							<input
+								class="output-filter"
+								type="text"
+								disabled
+								value="All"
+							/>
+							<ul class="dropdown">
+								<li class="dropdown-item">male</li>
+								<li class="dropdown-item">female</li>
+							</ul>
+						</div>
+					</div>
+					<div class="select-wrapper">
+						<div class="select-label">Filter by species</div>
+						<div class="select-block">
+							<svg class="filter-icon">
+								<use xlink:href="sprite.svg#filter"></use>
+							</svg>
+							<input
+								class="output-filter"
+								type="text"
+								disabled
+								value="All"
+							/>
+							<ul class="dropdown">
+								<li class="dropdown-item">
+									Captain America: The First Avenger
+								</li>
+								<li class="dropdown-item">The Avengers</li>
+							</ul>
+						</div>
+					</div>
+					<div class="btn-wrapper">
+						<button class="apply-btn">apply</button>
+					</div>
+				</div>
 				<span class="descr"
 					>hover over a character to view information about him</span
 				>
-				<div class="filters"></div>
 				<div class="cards">
+					<div class="hero-card">
+						<img
+							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/Black_Panther_AIW_Profile.jpg?raw=true"
+							alt=""
+							class="hero-photo"
+						/>
+					</div>
 					<div class="hero-card">
 						<img
 							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/CapAmerica-EndgameProfile.jpg?raw=true"
@@ -138,13 +224,6 @@
 								</span>
 							</div>
 						</div>
-					</div>
-					<div class="hero-card">
-						<img
-							src="https://github.com/Quper24/dbHeroes/blob/master/dbimage/Black_Panther_AIW_Profile.jpg?raw=true"
-							alt=""
-							class="hero-photo"
-						/>
 					</div>
 					<div class="hero-card">
 						<img
