@@ -38,7 +38,18 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n\n\n //Смена изображений главного экрана\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__.default)();\n\n//# sourceURL=webpack://3DGLO/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_audioControl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/audioControl */ \"./src/modules/audioControl.js\");\n\n\n\n //Смена изображений главного экрана\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__.default)(); //Управление звуком\n\n(0,_modules_audioControl__WEBPACK_IMPORTED_MODULE_1__.default)();\n\n//# sourceURL=webpack://3DGLO/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/audioControl.js":
+/*!*************************************!*\
+  !*** ./src/modules/audioControl.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar audioControl = function audioControl() {};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (audioControl);\n\n//# sourceURL=webpack://3DGLO/./src/modules/audioControl.js?");
 
 /***/ }),
 
@@ -444,7 +455,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "6a90d9243ebe3a2b8378"
+/******/ 		__webpack_require__.h = () => "ab0a2940793c0164191b"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
