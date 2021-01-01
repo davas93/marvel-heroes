@@ -9,9 +9,9 @@ const audioControl = () => {
 	range.addEventListener('input', () => {
 		music.volume = range.value / 100;
 		if (range.value == 0) {
-			volumeStatus.setAttribute('xlink:href', '/sprite.svg#volume-off');
+			volumeStatus.setAttribute('xlink:href', 'sprite.svg#volume-off');
 		} else {
-			volumeStatus.setAttribute('xlink:href', '/sprite.svg#volume');
+			volumeStatus.setAttribute('xlink:href', 'sprite.svg#volume');
 		}
 	});
 
@@ -19,9 +19,9 @@ const audioControl = () => {
 		if (music.volume !== 0) {
 			music.volume = 0;
 			range.value = 0;
-			volumeStatus.setAttribute('xlink:href', '/sprite.svg#volume-off');
+			volumeStatus.setAttribute('xlink:href', 'sprite.svg#volume-off');
 		} else {
-			volumeStatus.setAttribute('xlink:href', '/sprite.svg#volume');
+			volumeStatus.setAttribute('xlink:href', 'sprite.svg#volume');
 			range.value = 10;
 			music.volume = range.value / 100;
 		}
