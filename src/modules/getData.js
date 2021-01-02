@@ -18,8 +18,8 @@ const getData = () => {
 					let value = item[key];
 					if (value && key !== 'photo') {
 						info += `<div class="hero-data">
-							<span>${key}:</span>
-							<span>${value}</span>
+							<span class="label">${key}:</span>
+							<span class="sense">${value}</span>
 						</div>`;
 					}
 				});

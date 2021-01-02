@@ -381,6 +381,7 @@ input {
 				height: 100%;
 				background-color: rgba(0, 0, 0, 0.5);
 				display: flex;
+				flex-direction: column;
 				column-gap: 24px;
 				.hero-label {
 					display: flex;
@@ -390,11 +391,19 @@ input {
 						margin-bottom: 10px;
 					}
 				}
-				.hero-descr {
+				.hero-data {
 					display: flex;
-					flex-direction: column;
+					margin-bottom: 10px;
+					.label {
+						width: 35%;
+						text-transform: lowercase;
+						font-weight: 700;
+						&::first-letter {
+							text-transform: uppercase;
+						}
+					}
 					.sense {
-						margin-bottom: 10px;
+						flex: 1;
 					}
 				}
 			}
