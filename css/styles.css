@@ -97,7 +97,7 @@ input {
   left: -1px;
   top: 40px;
   width: 350px;
-  max-height: 0;
+  max-height: 180px;
   overflow: auto;
   background: rgba(1, 3, 22, 0.9);
   color: #e1e1e1;
@@ -108,6 +108,10 @@ input {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
+}
+
+.filters .select-wrapper .select-block .dropdown .dropdown-item::first-letter {
+  text-transform: uppercase;
 }
 
 .filters .select-wrapper .select-block .dropdown .dropdown-item:hover {
@@ -572,6 +576,10 @@ input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.content .cards .hero-card .hero-info .hero-data .sense::first-letter {
+  text-transform: uppercase;
 }
 
 .content .show-btn {
