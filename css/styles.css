@@ -97,10 +97,14 @@ input {
   left: -1px;
   top: 40px;
   width: 350px;
-  max-height: 180px;
+  max-height: 0;
   overflow: auto;
   background: rgba(1, 3, 22, 0.9);
   color: #e1e1e1;
+}
+
+.filters .select-wrapper .select-block .dropdown-active {
+  max-height: 180px;
 }
 
 .filters .select-wrapper .select-block .dropdown .dropdown-item {

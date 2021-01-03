@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_audioControl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/audioControl */ \"./src/modules/audioControl.js\");\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getData */ \"./src/modules/getData.js\");\n\n\n\n\n //Смена изображений главного экрана\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__.default)(); //Управление звуком\n\n(0,_modules_audioControl__WEBPACK_IMPORTED_MODULE_1__.default)(); //Получение данных и вывод на страницу\n\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_2__.default)();\n\n//# sourceURL=webpack://3DGLO/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_audioControl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/audioControl */ \"./src/modules/audioControl.js\");\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getData */ \"./src/modules/getData.js\");\n/* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/filter */ \"./src/modules/filter.js\");\n\n\n\n\n\n //Смена изображений главного экрана\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__.default)(); //Управление звуком\n\n(0,_modules_audioControl__WEBPACK_IMPORTED_MODULE_1__.default)(); //Получение данных и вывод на страницу\n\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_2__.default)(); //Фильтрация карточек\n\n(0,_modules_filter__WEBPACK_IMPORTED_MODULE_3__.default)();\n\n//# sourceURL=webpack://3DGLO/./src/index.js?");
 
 /***/ }),
 
@@ -50,6 +50,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar audioControl = function audioControl() {\n  var music = document.querySelector('.music'),\n      range = document.querySelector('.range'),\n      volume = document.querySelector('.volume-icon'),\n      volumeStatus = volume.querySelector('use');\n  music.volume = range.value / 100;\n  range.addEventListener('input', function () {\n    music.volume = range.value / 100;\n\n    if (range.value == 0) {\n      volumeStatus.setAttribute('xlink:href', 'sprite.svg#volume-off');\n    } else {\n      volumeStatus.setAttribute('xlink:href', 'sprite.svg#volume');\n    }\n  });\n  volume.addEventListener('click', function () {\n    if (music.volume !== 0) {\n      music.volume = 0;\n      range.value = 0;\n      volumeStatus.setAttribute('xlink:href', 'sprite.svg#volume-off');\n    } else {\n      volumeStatus.setAttribute('xlink:href', 'sprite.svg#volume');\n      range.value = 10;\n      music.volume = range.value / 100;\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (audioControl);\n\n//# sourceURL=webpack://3DGLO/./src/modules/audioControl.js?");
+
+/***/ }),
+
+/***/ "./src/modules/filter.js":
+/*!*******************************!*\
+  !*** ./src/modules/filter.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar filter = function filter() {\n  var select = document.querySelectorAll('.select-block');\n  select.forEach(function (item) {\n    item.addEventListener('click', function (event) {\n      var target = event.target;\n      var drop = item.querySelector('.dropdown'),\n          input = item.querySelector('input');\n      drop.classList.toggle('dropdown-active');\n\n      if (target.matches('li')) {\n        input.value = target.textContent.charAt(0).toUpperCase() + target.textContent.slice(1);\n      }\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (filter);\n\n//# sourceURL=webpack://3DGLO/./src/modules/filter.js?");
 
 /***/ }),
 
@@ -466,7 +477,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "142daec941db87709ed4"
+/******/ 		__webpack_require__.h = () => "eb1e54d810118465c2ca"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
