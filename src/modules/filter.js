@@ -16,6 +16,16 @@ const filter = () => {
 			}
 		});
 	});
+
+	document.addEventListener('click', (event) => {
+		if (!event.target.closest('.select-block')) {
+			const drop = document.querySelectorAll('.dropdown');
+
+			drop.forEach((item) => {
+				item.classList.remove('dropdown-active');
+			});
+		}
+	});
 };
 
 export default filter;

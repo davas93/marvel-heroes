@@ -60,7 +60,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar filter = function filter() {\n  var select = document.querySelectorAll('.select-block');\n  select.forEach(function (item) {\n    item.addEventListener('click', function (event) {\n      var target = event.target;\n      var drop = item.querySelector('.dropdown'),\n          input = item.querySelector('input');\n      drop.classList.toggle('dropdown-active');\n\n      if (target.matches('li')) {\n        input.value = target.textContent.charAt(0).toUpperCase() + target.textContent.slice(1);\n      }\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (filter);\n\n//# sourceURL=webpack://3DGLO/./src/modules/filter.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar filter = function filter() {\n  var select = document.querySelectorAll('.select-block');\n  select.forEach(function (item) {\n    item.addEventListener('click', function (event) {\n      var target = event.target;\n      var drop = item.querySelector('.dropdown'),\n          input = item.querySelector('input');\n      drop.classList.toggle('dropdown-active');\n\n      if (target.matches('li')) {\n        input.value = target.textContent.charAt(0).toUpperCase() + target.textContent.slice(1);\n      }\n    });\n  });\n  document.addEventListener('click', function (event) {\n    if (!event.target.closest('.select-block')) {\n      var drop = document.querySelectorAll('.dropdown');\n      drop.forEach(function (item) {\n        item.classList.remove('dropdown-active');\n      });\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (filter);\n\n//# sourceURL=webpack://3DGLO/./src/modules/filter.js?");
 
 /***/ }),
 
@@ -477,7 +477,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "eb1e54d810118465c2ca"
+/******/ 		__webpack_require__.h = () => "cef3f92ebfef143c46ab"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
