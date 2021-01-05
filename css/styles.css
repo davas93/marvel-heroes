@@ -528,6 +528,9 @@ input {
 
 .content .cards .hero-card .hero-info {
   position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
   z-index: 2;
   padding: 30px 17px;
   width: 100%;

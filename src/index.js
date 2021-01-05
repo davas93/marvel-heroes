@@ -4,6 +4,7 @@ import slider from './modules/slider';
 import audioControl from './modules/audioControl';
 import getData from './modules/getData';
 import filter from './modules/filter';
+import showInfo from './modules/showInfo';
 
 //Смена изображений главного экрана
 slider();
@@ -16,3 +17,6 @@ getData();
 
 //Фильтрация карточек
 filter();
+
+//Показ информации о герое при наведении
+showInfo();
