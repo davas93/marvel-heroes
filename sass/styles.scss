@@ -490,3 +490,21 @@ input {
 		}
 	}
 }
+
+.scroll-up {
+	visibility: hidden;
+	position: fixed;
+	z-index: 100;
+	right: 50px;
+	bottom: 50px;
+	.arrow-up {
+		fill: #e1e1e1;
+		width: 50px;
+		height: 50px;
+		transition: 0.3s;
+		border-radius: 50%;
+		&:hover {
+			fill: darken($color: #e1e1e1, $amount: 20);
+		}
+	}
+}

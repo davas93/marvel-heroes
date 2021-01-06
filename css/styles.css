@@ -673,4 +673,25 @@ input {
 .footer .footer-wrapper .socials .socials-links .social-icon:hover {
   fill: #959595;
 }
+
+.scroll-up {
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  right: 50px;
+  bottom: 50px;
+}
+
+.scroll-up .arrow-up {
+  fill: #e1e1e1;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+.scroll-up .arrow-up:hover {
+  fill: #aeaeae;
+}
 /*# sourceMappingURL=styles.css.map */

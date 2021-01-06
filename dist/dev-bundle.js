@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_audioControl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/audioControl */ \"./src/modules/audioControl.js\");\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getData */ \"./src/modules/getData.js\");\n/* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/filter */ \"./src/modules/filter.js\");\n/* harmony import */ var _modules_showInfo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/showInfo */ \"./src/modules/showInfo.js\");\n\n\n\n\n\n\n //Смена изображений главного экрана\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__.default)(); //Управление звуком\n\n(0,_modules_audioControl__WEBPACK_IMPORTED_MODULE_1__.default)(); //Получение данных и вывод на страницу\n\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_2__.default)(); //Фильтрация карточек\n\n(0,_modules_filter__WEBPACK_IMPORTED_MODULE_3__.default)(); //Показ информации о герое при наведении\n\n(0,_modules_showInfo__WEBPACK_IMPORTED_MODULE_4__.default)();\n\n//# sourceURL=webpack://3DGLO/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_audioControl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/audioControl */ \"./src/modules/audioControl.js\");\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getData */ \"./src/modules/getData.js\");\n/* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/filter */ \"./src/modules/filter.js\");\n/* harmony import */ var _modules_showInfo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/showInfo */ \"./src/modules/showInfo.js\");\n/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/smoothScroll */ \"./src/modules/smoothScroll.js\");\n\n\n\n\n\n\n\n //Смена изображений главного экрана\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__.default)(); //Управление звуком\n\n(0,_modules_audioControl__WEBPACK_IMPORTED_MODULE_1__.default)(); //Получение данных и вывод на страницу\n\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_2__.default)(); //Фильтрация карточек\n\n(0,_modules_filter__WEBPACK_IMPORTED_MODULE_3__.default)(); //Показ информации о герое при наведении\n\n(0,_modules_showInfo__WEBPACK_IMPORTED_MODULE_4__.default)(); //Плавная прокрутка\n\n(0,_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_5__.default)();\n\n//# sourceURL=webpack://3DGLO/./src/index.js?");
 
 /***/ }),
 
@@ -94,6 +94,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar slider = function slider() {\n  var main = document.querySelector(\"main\"),\n      slide = main.querySelectorAll(\".slide\");\n  var currentSlide = 0,\n      interval;\n\n  var prevSlide = function prevSlide(elem, index, strClass) {\n    elem[index].classList.remove(strClass);\n  };\n\n  var nextSlide = function nextSlide(elem, index, strClass) {\n    elem[index].classList.add(strClass);\n  };\n\n  var autoPlaySlide = function autoPlaySlide() {\n    prevSlide(slide, currentSlide, \"slide-active\");\n    currentSlide++;\n\n    if (currentSlide >= slide.length) {\n      currentSlide = 0;\n    }\n\n    nextSlide(slide, currentSlide, \"slide-active\");\n  };\n\n  var startSlide = function startSlide() {\n    var time = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;\n    interval = setInterval(autoPlaySlide, time);\n  };\n\n  startSlide(20000);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);\n\n//# sourceURL=webpack://3DGLO/./src/modules/slider.js?");
+
+/***/ }),
+
+/***/ "./src/modules/smoothScroll.js":
+/*!*************************************!*\
+  !*** ./src/modules/smoothScroll.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar smoothScroll = function smoothScroll() {\n  var arrowUp = document.querySelector('.scroll-up'),\n      scrollTo = document.querySelector('.anchor-link');\n  document.addEventListener('scroll', function () {\n    if (window.scrollY >= 2000) {\n      arrowUp.style.visibility = 'visible';\n    } else {\n      arrowUp.style.visibility = '';\n    }\n  });\n  scrollTo.addEventListener('click', function (e) {\n    e.preventDefault();\n    document.querySelector('#heroes-section').scrollIntoView({\n      behavior: 'smooth',\n      block: 'start'\n    });\n  });\n  arrowUp.addEventListener('click', function (e) {\n    e.preventDefault();\n    window.scrollTo({\n      behavior: 'smooth',\n      top: 0\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (smoothScroll);\n\n//# sourceURL=webpack://3DGLO/./src/modules/smoothScroll.js?");
 
 /***/ }),
 
@@ -488,7 +499,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "a3fbdbf7941fd3a4b4b5"
+/******/ 		__webpack_require__.h = () => "d7ddf0fa76d109e0da73"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

@@ -34,4 +34,9 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" id="filter">
     <path d="M1 2a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V15l-4 4v-6.586a1 1 0 00-.293-.707L1.293 5.293A1 1 0 011 4.586V2z" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol>
+  <symbol fill="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="arrow-up">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 15A7 7 0 108 1a7 7 0 000 14zm0 1A8 8 0 108-.001 8 8 0 008 16z" ></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.646 8.354a.5.5 0 00.708 0L8 5.707l2.646 2.647a.5.5 0 10.708-.708l-3-3a.5.5 0 00-.708 0l-3 3a.5.5 0 000 .708z" ></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 11.5a.5.5 0 00.5-.5V6a.5.5 0 10-1 0v5a.5.5 0 00.5.5z" ></path>
+  </symbol>
 </svg>
