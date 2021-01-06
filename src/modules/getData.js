@@ -9,6 +9,8 @@ const getData = () => {
 			return response.json();
 		})
 		.then((data) => {
+			window.cards = data;
+
 			data.forEach((item) => {
 				let info = '';
 
