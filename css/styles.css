@@ -12,6 +12,12 @@ body {
   background-size: 960px 960px;
 }
 
+.light {
+  background-color: #dedede;
+  color: #2e2e2e;
+  background-image: url(/img/light-bg.jpg);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -83,6 +89,11 @@ input {
   cursor: pointer;
 }
 
+.filters .select-wrapper .select-block-light {
+  border-bottom: 1px solid #2e2e2e;
+  stroke: #2e2e2e;
+}
+
 .filters .select-wrapper .select-block:hover {
   color: #959595;
   stroke: #959595;
@@ -107,6 +118,11 @@ input {
   max-height: 180px;
 }
 
+.filters .select-wrapper .select-block .dropdown-light {
+  background: rgba(255, 255, 255, 0.9);
+  color: #2e2e2e;
+}
+
 .filters .select-wrapper .select-block .dropdown .dropdown-item {
   padding: 10px 15px;
   -webkit-transition: 0.3s;
@@ -120,6 +136,7 @@ input {
 
 .filters .select-wrapper .select-block .dropdown .dropdown-item:hover {
   background: #030e39;
+  color: #e1e1e1;
 }
 
 .filters .select-wrapper .select-block .dropdown::-webkit-scrollbar {
@@ -194,6 +211,22 @@ input {
           box-shadow: inset 0px -70px 80px 50px #010316;
 }
 
+.main-light {
+  -webkit-box-shadow: 0px 50px 100px 50px #ccd6da;
+          box-shadow: 0px 50px 100px 50px #ccd6da;
+}
+
+.main-light::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-box-shadow: inset 0px -50px 100px 50px #ccd6da;
+          box-shadow: inset 0px -50px 100px 50px #ccd6da;
+}
+
 .main .header {
   position: relative;
   z-index: 2;
@@ -236,6 +269,7 @@ input {
 }
 
 .main .header .ui .switch .switch-label {
+  color: #e1e1e1;
   margin: 0 10px;
 }
 
@@ -300,7 +334,13 @@ input {
           align-items: center;
 }
 
+.main .header .ui .volume .volume-wrapper .volume-text {
+  color: #e1e1e1;
+}
+
 .main .header .ui .volume .volume-wrapper .volume-icon {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   margin-right: 15px;
   width: 30px;
   height: 30px;
@@ -515,6 +555,11 @@ input {
           box-shadow: 0px 0px 40px 20px rgba(158, 238, 255, 0.25);
 }
 
+.content .cards .hero-card-light:hover {
+  -webkit-box-shadow: 5px 5px 30px 10px rgba(86, 86, 86, 0.63);
+          box-shadow: 5px 5px 30px 10px rgba(86, 86, 86, 0.63);
+}
+
 .content .cards .hero-card .hero-photo {
   position: absolute;
   z-index: 1;
@@ -535,6 +580,7 @@ input {
   padding: 30px 17px;
   width: 100%;
   height: 100%;
+  color: #e1e1e1;
   background-color: rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -615,6 +661,12 @@ input {
 .footer {
   padding: 100px 50px;
   background-color: #010316;
+  fill: #e1e1e1;
+}
+
+.footer-light {
+  fill: #2e2e2e;
+  background-color: #ccd6da;
 }
 
 .footer .footer-wrapper {
@@ -665,7 +717,7 @@ input {
   margin-bottom: 10px;
   width: 20px;
   height: 20px;
-  fill: #e1e1e1;
+  fill: inherit;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -680,10 +732,15 @@ input {
   z-index: 100;
   right: 50px;
   bottom: 50px;
+  fill: #e1e1e1;
+}
+
+.scroll-up-light {
+  fill: #2e2e2e;
 }
 
 .scroll-up .arrow-up {
-  fill: #e1e1e1;
+  fill: inherit;
   width: 50px;
   height: 50px;
   -webkit-transition: 0.3s;

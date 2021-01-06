@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_audioControl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/audioControl */ \"./src/modules/audioControl.js\");\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getData */ \"./src/modules/getData.js\");\n/* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/filter */ \"./src/modules/filter.js\");\n/* harmony import */ var _modules_showInfo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/showInfo */ \"./src/modules/showInfo.js\");\n/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/smoothScroll */ \"./src/modules/smoothScroll.js\");\n\n\n\n\n\n\n\n //Смена изображений главного экрана\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__.default)(); //Управление звуком\n\n(0,_modules_audioControl__WEBPACK_IMPORTED_MODULE_1__.default)(); //Получение данных и вывод на страницу\n\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_2__.default)(); //Фильтрация карточек\n\n(0,_modules_filter__WEBPACK_IMPORTED_MODULE_3__.default)(); //Показ информации о герое при наведении\n\n(0,_modules_showInfo__WEBPACK_IMPORTED_MODULE_4__.default)(); //Плавная прокрутка\n\n(0,_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_5__.default)();\n\n//# sourceURL=webpack://3DGLO/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ \"./src/modules/slider.js\");\n/* harmony import */ var _modules_audioControl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/audioControl */ \"./src/modules/audioControl.js\");\n/* harmony import */ var _modules_getData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/getData */ \"./src/modules/getData.js\");\n/* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/filter */ \"./src/modules/filter.js\");\n/* harmony import */ var _modules_showInfo__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/showInfo */ \"./src/modules/showInfo.js\");\n/* harmony import */ var _modules_smoothScroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/smoothScroll */ \"./src/modules/smoothScroll.js\");\n/* harmony import */ var _modules_theme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/theme */ \"./src/modules/theme.js\");\n\n\n\n\n\n\n\n\n //Смена изображений главного экрана\n\n(0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__.default)(); //Управление звуком\n\n(0,_modules_audioControl__WEBPACK_IMPORTED_MODULE_1__.default)(); //Получение данных и вывод на страницу\n\n(0,_modules_getData__WEBPACK_IMPORTED_MODULE_2__.default)(); //Фильтрация карточек\n\n(0,_modules_filter__WEBPACK_IMPORTED_MODULE_3__.default)(); //Показ информации о герое при наведении\n\n(0,_modules_showInfo__WEBPACK_IMPORTED_MODULE_4__.default)(); //Плавная прокрутка\n\n(0,_modules_smoothScroll__WEBPACK_IMPORTED_MODULE_5__.default)(); //Переключатель темы\n\n(0,_modules_theme__WEBPACK_IMPORTED_MODULE_6__.default)();\n\n//# sourceURL=webpack://3DGLO/./src/index.js?");
 
 /***/ }),
 
@@ -105,6 +105,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar smoothScroll = function smoothScroll() {\n  var arrowUp = document.querySelector('.scroll-up'),\n      scrollTo = document.querySelector('.anchor-link');\n  document.addEventListener('scroll', function () {\n    if (window.scrollY >= 2000) {\n      arrowUp.style.visibility = 'visible';\n    } else {\n      arrowUp.style.visibility = '';\n    }\n  });\n  scrollTo.addEventListener('click', function (e) {\n    e.preventDefault();\n    document.querySelector('#heroes-section').scrollIntoView({\n      behavior: 'smooth',\n      block: 'start'\n    });\n  });\n  arrowUp.addEventListener('click', function (e) {\n    e.preventDefault();\n    window.scrollTo({\n      behavior: 'smooth',\n      top: 0\n    });\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (smoothScroll);\n\n//# sourceURL=webpack://3DGLO/./src/modules/smoothScroll.js?");
+
+/***/ }),
+
+/***/ "./src/modules/theme.js":
+/*!******************************!*\
+  !*** ./src/modules/theme.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\nvar theme = function theme() {\n  var switchToggle = document.getElementById('switch'),\n      body = document.querySelector('body'),\n      main = document.querySelector('main'),\n      select = document.querySelectorAll('.select-block'),\n      dropdowns = document.querySelectorAll('.dropdown'),\n      footer = document.querySelector('footer'),\n      upBtn = document.querySelector('.scroll-up');\n  switchToggle.addEventListener('change', function () {\n    if (switchToggle.checked) {\n      body.classList.add('light');\n      main.classList.add('main-light');\n      select.forEach(function (item) {\n        item.classList.add('select-block-light');\n      });\n      dropdowns.forEach(function (item) {\n        item.classList.add('dropdown-light');\n      });\n      footer.classList.add('footer-light');\n      upBtn.classList.add('scroll-up-light');\n    } else {\n      body.classList.remove('light');\n      main.classList.remove('main-light');\n      select.forEach(function (item) {\n        item.classList.remove('select-block-light');\n      });\n      dropdowns.forEach(function (item) {\n        item.classList.remove('dropdown-light');\n      });\n      footer.classList.remove('footer-light');\n      upBtn.classList.remove('scroll-up-light');\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (theme);\n\n//# sourceURL=webpack://3DGLO/./src/modules/theme.js?");
 
 /***/ }),
 
@@ -499,7 +510,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => "d7ddf0fa76d109e0da73"
+/******/ 		__webpack_require__.h = () => "3c329b94ffe3e625dbf2"
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

@@ -6,6 +6,7 @@ import getData from './modules/getData';
 import filter from './modules/filter';
 import showInfo from './modules/showInfo';
 import smoothScroll from './modules/smoothScroll';
+import theme from './modules/theme';
 
 //Смена изображений главного экрана
 slider();
@@ -24,3 +25,6 @@ showInfo();
 
 //Плавная прокрутка
 smoothScroll();
+
+//Переключатель темы
+theme();
