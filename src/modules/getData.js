@@ -27,7 +27,6 @@ const getData = () => {
 				const heroCard = `<div class="hero-card">
 						<img src="https://raw.githubusercontent.com/Quper24/dbHeroes/master/${item.photo}" alt="${item.name}" class="hero-photo" />
 						<div class="hero-info">${info}</div>
-						<audio class="sound-effect" src="audio/sound-effect.mp3"></audio>
                     </div>`;
 
 				cards.insertAdjacentHTML('beforeend', heroCard);
