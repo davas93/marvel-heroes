@@ -3,13 +3,31 @@ const getData = () => {
 
 	fetch('https://marvel-4ee1f-default-rtdb.firebaseio.com/test.json')
 		.then((response) => {
+			cards.innerHTML = `<div class="overlay">
+						<div class="spinner center">
+							<div class="spinner-blade"></div>
+							<div class="spinner-blade"></div>
+							<div class="spinner-blade"></div>
+							<div class="spinner-blade"></div>
+							<div class="spinner-blade"></div>
+							<div class="spinner-blade"></div>
+							<div class="spinner-blade"></div>
+							<div class="spinner-blade"></div>
+							<div class="spinner-blade"></div>
+							<div class="spinner-blade"></div>
+							<div class="spinner-blade"></div>
+							<div class="spinner-blade"></div>
+						</div>
+					</div>`;
 			if (response.status !== 200) {
-				throw 'error';
+				throw new Error('status network not 200');
 			}
 			return response.json();
 		})
 		.then((data) => {
 			window.cards = data;
+
+			document.querySelector('.overlay').remove();
 
 			data.forEach((item) => {
 				let info = '';
@@ -87,6 +105,14 @@ const getData = () => {
 			createFilterBySpecies();
 		})
 		.catch((error) => {
+			cards.innerHTML = `<div class="status-message">
+						<svg class="error">
+							<use xlink:href="sprite.svg#error"></use>
+							<span class="message">
+								Server not available, please try later
+							</span>
+						</svg>
+					</div>`;
 			console.error(error);
 		});
 };
